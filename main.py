@@ -56,7 +56,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
     """
     # TODO: Implement function
     conv_1x1 = tf.layers.conv2d(
-        vgg_layer7_out_tensor_name, num_classes, 1,
+        vgg_layer7_out, num_classes, 1,
         padding='same', kernel_regularizer=tf.contrib.layers.l2_regularizer(1e-3)
     )
     layer4a_in1 = tf.layers.conv2d_transpose(
