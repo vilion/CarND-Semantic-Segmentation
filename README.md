@@ -1,4 +1,37 @@
-# Semantic Segmentation
+Semantic Segmentation Project (Advanced Deep Learning)
+=========================================
+
+introduction
+--------------------------
+The goal of this project is creating the model of fully convolutional neural network which realize the space of the road in an image feed to network.
+
+Approach
+---------------------------
+### Architecture
+For construct fully convolutional neural network, pre-trained VGG16 network is used.  
+The output of this pre-trained network is converted to 1x1 convolutional layer and feed to next convolutional transpose layer.  
+And for improvement of performance, 1x1 convolution of layer4 is added.  
+And then to construct next layer, convolutional transpose is used and 1x1 convolution of layer3 is added.  
+And next transpose convolutional layer is final output.
+In each layer, kernel initializer and regularizer is used.
+
+### loss function
+To generate loss, soft max cross entropy is used.  
+And in training, adam optimizer is used for optimize.
+
+### Training
+The hyperparameters used for training are:  
+keep_prob: 0.5  
+    learning_rate: 0.0009  
+    epochs: 50  
+    batch_size: 5
+
+### Result
+At epoch 50, The loss becomes about 0.032 to 0.015.
+
+
+The following is from the original Udacity repository README
+=========================================
 ### Introduction
 In this project, you'll label the pixels of a road in images using a Fully Convolutional Network (FCN).
 
@@ -31,6 +64,6 @@ python main.py
  - `main.py`
  - `project_tests.py`
  - Newest inference images from `runs` folder  (**all images from the most recent run**)
- 
+
  ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
