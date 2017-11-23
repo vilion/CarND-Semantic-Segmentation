@@ -3,7 +3,7 @@ Semantic Segmentation Project (Advanced Deep Learning)
 
 introduction
 --------------------------
-The goal of this project is creating the model of fully convolutional neural network which realize the space of the road in an image feed to network.
+The goal of this project is creating the model of fully convolutional neural network which identify the space of the road in an image feed to network.
 
 Approach
 ---------------------------
